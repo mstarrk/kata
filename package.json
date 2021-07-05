@@ -1,0 +1,21 @@
+{
+  "name": "kata",
+  "version": "1.0.0",
+  "description": "A discord bot",
+  "main": "kata.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mStarrk",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "mysql": "^2.18.1",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.30.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4"
+  }
+}
