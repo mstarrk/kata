@@ -26,13 +26,7 @@ async function main() {
 	db.authenticate()
 			.then(console.log('DB Authenticated.'))
 		.catch((err) => console.error('DB auth error: '+ err));
-	
-	try {
-		db.sync({ force: true });
-console.log("All models were synchronized successfully.");
-	} catch (error) {
-		console.log('Error syncing: ' + err);
-	}
+		
 	// DISCORD: Connecting
 	client.login(process.env.DISCORD_BOT_TOKEN);
 }
