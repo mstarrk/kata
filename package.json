@@ -4,18 +4,24 @@
   "description": "A discord bot",
   "main": "kata.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node kata.js",
+    "test": "nodemon test.js",
+    "dev": "nodemon kata.js"
   },
   "author": "mStarrk",
   "license": "ISC",
   "dependencies": {
     "discord.js": "^12.5.3",
+    "dotenv": "^10.0.0",
     "mysql": "^2.18.1",
-    "xmlhttprequest": "^1.8.0"
+    "pg": "^8.6.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.6.5"
   },
   "devDependencies": {
     "eslint": "^7.30.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.23.4"
+    "eslint-plugin-import": "^2.23.4",
+    "nodemon": "^2.0.9"
   }
 }
