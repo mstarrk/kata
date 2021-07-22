@@ -22,11 +22,13 @@ const NeumannArmy = new Guild('Neumann Army', guildId);
 // -------------------------------------------------
 async function main() {
 	// DB Init
+	console.log('Testing on prod ♿♿♿');
+
 	db.authenticate()
 		.then(console.log('DB Authenticated.'))
 		.catch((err) => console.error(err));
 
-	await sequelize.sync({ force: true });
+	db.sync({ force: true });
 	console.log("All models were synchronized successfully.");
 			
 	// DISCORD: Connecting
