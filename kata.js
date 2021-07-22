@@ -26,6 +26,9 @@ function main() {
 		.then(console.log('DB Authenticated.'))
 		.catch((err) => console.error(err));
 
+	// Sync models
+	db.sync();
+
 	// DISCORD: Connecting
 	client.login(process.env.DISCORD_BOT_TOKEN);
 }
