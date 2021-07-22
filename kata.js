@@ -20,17 +20,15 @@ const NeumannArmy = new Guild('Neumann Army', guildId);
 
 // Run Program
 // -------------------------------------------------
-function main() {
+async function main() {
 	// DB Init
 	db.authenticate()
-		.then(console.log('DB: Authenticated.'))
-		.catch((err) => console.error('DB: error authenticating = ' + err));
+		.then(console.log('DB Authenticated.'))
+		.catch((err) => console.error(err));
 
-	// Sync models
-
-	await db.sync({ force: true });
+	await sequelize.sync({ force: true });
 	console.log("All models were synchronized successfully.");
-
+			
 	// DISCORD: Connecting
 	client.login(process.env.DISCORD_BOT_TOKEN);
 }
