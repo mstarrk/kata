@@ -22,14 +22,10 @@ const NeumannArmy = new Guild('Neumann Army', guildId);
 // -------------------------------------------------
 async function main() {
 	// DB Init
-	console.log('Testing on prod ♿♿♿');
 
 	db.authenticate()
-		.then(console.log('DB Authenticated.'))
-		.catch((err) => console.error(err));
-
-	db.sync({ force: true });
-	console.log("All models were synchronized successfully.");
+			.then(console.log('DB Authenticated.'))
+		.catch((err) => console.error('DB auth error: '+ err));
 			
 	// DISCORD: Connecting
 	client.login(process.env.DISCORD_BOT_TOKEN);
