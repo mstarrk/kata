@@ -47,7 +47,6 @@ class Bot {
 		if (msg.author.id === '219602984546336781' && Validator.CheckUrlImg(url)) {
 			msg.react(guild.GetEmojiId('graciosohermanito'));
 			const cagoderisahermanito = guild.emojis.find((el) => el.name === 'graciosohermanito');
-			msg.reply(`miren todos un meme del hermanito!!!! un cago de risa!! otro otro!!!🙏🤣👏👏🤣${cagoderisahermanito}`);
 			return;
 		}
 
