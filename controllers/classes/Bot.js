@@ -1,4 +1,3 @@
-/* eslint-disable comma-dangle */
 const Validator = require('./Validator');
 
 class Bot {
@@ -46,7 +45,6 @@ class Bot {
 
 		if (msg.author.id === '219602984546336781' && Validator.CheckUrlImg(url)) {
 			msg.react(guild.GetEmojiId('graciosohermanito'));
-			const cagoderisahermanito = guild.emojis.find((el) => el.name === 'graciosohermanito');
 			return;
 		}
 
@@ -61,7 +59,6 @@ class Bot {
 
 		if (msgContent.includes('HERMANITO')) {
 			msg.react(guild.GetEmojiId('elklodiceloes'));
-			msg.reply('el que lo dice lo es');
 		}
 
 		if (msgContent.includes('PINGO')) {
