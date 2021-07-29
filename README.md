@@ -15,4 +15,5 @@ node kata.js || npm start
 
 ___
 
-Made using **node.js**, **Sequelize** and **Discord.js** 🔥
+* Made using **node.js**, **Sequelize** and **Discord.js** 🔥
+* Hosted in Heroku.com
