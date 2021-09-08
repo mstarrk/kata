@@ -44,20 +44,7 @@ class Bot {
 
     if (msgAttachments.length > 0) {
       url = msgAttachments[0].url;
-    }
-
-    if (msg.author.id === "219602984546336781" && Validator.CheckUrlImg(url)) {
-      msg.react(guild.GetEmojiId("graciosohermanito"));
-      return;
-    }
-
-    if (msg.author.id == "628908743832371210") {
-      if (MIA.isMissing()) {
-        msg.reply("@here VOLVIO NEUMANN DONDE PINGO ESTABA");
-        msg.react(guild.GetEmojiId("newman"));
-      }
-      MIA.isMissing(false);
-    }
+    }    
 
     if (msgContent.includes("NEUMANN")) {
       msg.react("🙏");
@@ -84,6 +71,19 @@ class Bot {
 
     if (msgContent.includes("ANO")) {
       msg.react("🍩");
+    }
+
+    if (msg.author.id === "219602984546336781" && Validator.CheckUrlImg(url)) {
+      msg.react(guild.GetEmojiId("graciosohermanito"));
+      return;
+    }
+
+    if (msg.author.id == "628908743832371210") {
+      if (MIA.isMissing()) {
+        msg.reply("@here VOLVIO NEUMANN DONDE PINGO ESTABA");
+        msg.react(guild.GetEmojiId("newman"));
+      }
+      MIA.isMissing(false);
     }
   }
 
