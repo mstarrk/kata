@@ -1,5 +1,4 @@
 const Validator = require("./Validator");
-const MIA = require("./NeumannMia");
 
 class Bot {
   static async Setup(guild, client) {
@@ -16,7 +15,7 @@ class Bot {
     client.user.setPresence({
       status: "available",
       activity: {
-        name: "Buscando a Neumann 🐠",
+        name: "roquera rule34 🥵",
         type: "WATCHING",
       },
     });
@@ -46,15 +45,14 @@ class Bot {
       url = msgAttachments[0].url;
     }    
 
+    if (msgContent == "!NEUMANN") {
+      msg.reply('Ya apareció Neumann! 🥳 😎');
+      return;
+    }
+
     if (msgContent.includes("NEUMANN")) {
       msg.react("🙏");
       msg.react("✡️");
-      if (MIA.isMissing()) msg.reply(MIA.stillMissing());
-    }
-
-    if (msgContent == "!NEUMANN") {
-      let res = MIA.isMissing() ? MIA.timeElapsed() : "Neumann ya revivió 😎";
-      msg.reply(res);
     }
 
     if (msgContent.includes("KATA") || msgContent.includes("CATA")) {
@@ -76,14 +74,6 @@ class Bot {
     if (msg.author.id === "219602984546336781" && Validator.CheckUrlImg(url)) {
       msg.react(guild.GetEmojiId("graciosohermanito"));
       return;
-    }
-
-    if (msg.author.id == "628908743832371210") {
-      if (MIA.isMissing()) {
-        msg.reply("@here VOLVIO NEUMANN DONDE PINGO ESTABA");
-        msg.react(guild.GetEmojiId("newman"));
-      }
-      MIA.isMissing(false);
     }
   }
 
