@@ -15,7 +15,7 @@ class Bot {
     client.user.setPresence({
       status: "available",
       activity: {
-        name: "roquera rule34 🥵",
+        name: "neumann cumpleañito 😎🤙",
         type: "WATCHING",
       },
     });
