@@ -1,6 +1,3 @@
-/* eslint-disable class-methods-use-this */
-/* eslint-disable comma-dangle */
-
 // Modules
 require('dotenv').config();
 const Sequelize = require('sequelize');
