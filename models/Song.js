@@ -1,13 +1,8 @@
-/* eslint-disable comma-dangle */
-
 const { DataTypes } = require('sequelize');
 const { Model } = require('sequelize');
 const sequelize = require('../controllers/Database');
 
-// extends
-
 class Song extends Model {}
-
 
 Song.init({
 	// Model attributes are defined here
