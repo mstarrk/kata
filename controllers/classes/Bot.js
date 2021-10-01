@@ -46,7 +46,7 @@ class Bot {
     }    
 
     if (msgContent == "!NEUMANN") {
-      msg.reply('Ya apareció Neumann! 🥳 😎');
+      msg.reply('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.enlacejudio.com%2Fwp-content%2Fuploads%2F2020%2F07%2FFrase-Judia-Si-todos-tiraramos-al-mismo-lado-cambiariamos-el-mundo-Enlace-Judio-Mexico-Proverbio-Frases-judias.jpg&f=1&nofb=1');
       return;
     }
 
@@ -77,7 +77,9 @@ class Bot {
     }
   }
 
-  static async Report() {}
+  static async SendMessage(msg, guild, client) {
+    
+  }
 }
 
 module.exports = Bot;
