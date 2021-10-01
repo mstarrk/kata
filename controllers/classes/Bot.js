@@ -79,16 +79,16 @@ class Bot {
     }
   }
 
-  static async SendMessage(msg, guild, client) {
+  static SendMessage(msg, guild, client) {
     const channel = guild.FindChannel(client, "861505455637266463");
-    
+
     channel
-      .send("test")
+      .send(msg)
       .then((message) => console.log(`Sent message: ${message.content}`))
       .catch(console.error);
   }
 
-  static async SetPresence(client, activityName) {
+  static SetPresence(client, activityName) {
     client.user.setPresence({
       status: "available",
       activity: {

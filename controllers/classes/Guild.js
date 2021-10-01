@@ -1,5 +1,3 @@
-/* eslint-disable class-methods-use-this */
-
 class Guild {
 	constructor(name, id) {
 		this.name = name;
