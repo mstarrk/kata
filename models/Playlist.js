@@ -1,12 +1,6 @@
-/* eslint-disable comma-dangle */
-
-/* eslint-disable comma-dangle */
-
 const { DataTypes } = require('sequelize');
 const { Model } = require('sequelize');
 const sequelize = require('../controllers/Database');
-
-// extends
 
 class Playlist extends Model {}
 
