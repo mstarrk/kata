@@ -43,10 +43,12 @@ class Bot {
 
     if (msgAttachments.length > 0) {
       url = msgAttachments[0].url;
-    }    
+    }
 
     if (msgContent == "!NEUMANN") {
-      msg.reply('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.enlacejudio.com%2Fwp-content%2Fuploads%2F2020%2F07%2FFrase-Judia-Si-todos-tiraramos-al-mismo-lado-cambiariamos-el-mundo-Enlace-Judio-Mexico-Proverbio-Frases-judias.jpg&f=1&nofb=1');
+      msg.reply(
+        "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.enlacejudio.com%2Fwp-content%2Fuploads%2F2020%2F07%2FFrase-Judia-Si-todos-tiraramos-al-mismo-lado-cambiariamos-el-mundo-Enlace-Judio-Mexico-Proverbio-Frases-judias.jpg&f=1&nofb=1"
+      );
       return;
     }
 
@@ -77,8 +79,21 @@ class Bot {
     }
   }
 
-  static async SendMessage(msg, guild, client) {
-    
+  static async SendMessage(msg, channel, client) {
+    client
+      .send("test")
+      .then((message) => console.log(`Sent message: ${message.content}`))
+      .catch(console.error);
+  }
+
+  static async SetPresence(client, activityName) {
+    client.user.setPresence({
+      status: "available",
+      activity: {
+        name: activityName,
+        type: "WATCHING",
+      },
+    });
   }
 }
 

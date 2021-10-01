@@ -37,6 +37,7 @@ async function main() {
 
 client.on('ready', async () => {
 	Bot.Setup(NeumannArmy, client);
+	Bot.SendMessage("A", NeumannArmy, client);
 });
 client.on('message', (msg) => Bot.React(msg, NeumannArmy));
 client.ws.on('INTERACTION_CREATE', (interaction) => {
