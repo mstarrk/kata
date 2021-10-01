@@ -1,11 +1,17 @@
-const express = require("express");
-const app = express();
-let port = process.env.PORT || 5000;
+const fastify = require("fastify")({ logger: true });
+const PORT = process.env.PORT || 5000;
 
-app.get("/", (req, res) => {
-  res.send("/aa.html");
+fastify.get("/", (req, reply) => {
+  reply.sendFile("index.html");
 });
 
-app.listen(port, () => {
-  console.log("Listening.");
-});
+const start = async () => {
+  try {
+    await fastify.listen(PORT);
+  } catch (error) {
+    fastify.log.error(error);
+    process.exit(1);
+  }
+};
+
+start();
