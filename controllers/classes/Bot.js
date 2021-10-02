@@ -15,7 +15,7 @@ class Bot {
     client.user.setPresence({
       status: "available",
       activity: {
-        name: "Fimosis: Miedo a perder a tus seres queridos :(",
+        name: "Fimosis: Miedo a perder a tus seres queridos 😥😥🥵🥵",
         type: "WATCHING",
       },
     });
