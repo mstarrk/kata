@@ -74,7 +74,7 @@ async function main() {
     client.on("end", () => console.log("Connection Ended"));
   });
 
-  server.listen(HANDLE);
+  server.listen(process.env.PORT);
 }
 // -------------------------------------------------
 // Event listeners
