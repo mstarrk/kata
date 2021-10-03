@@ -79,8 +79,8 @@ class Bot {
     }
   }
 
-  static SendMessage(msg, guild, client) {
-    const channel = guild.FindChannel(client, "861505455637266463");
+  static SendMessage(msg, channelId, guild, client) {
+    const channel = guild.FindChannel(client, channelId);
 
     channel
       .send(msg)

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      id="stylesheet"
+      rel="stylesheet"
+      href="https://bootswatch.com/5/darkly/bootstrap.min.css"
+    />
+    <title>Kata - Admin</title>
+  </head>
+  <body>
+    <div class="container mt-4">
+      <h1 class="text-center">Welcome 😎</h1>
+      <div class="row">
+        <form action="setStatus" method="POST">
+          <h3>Set new status:</h3>
+          <input type="text" name="status" />
+          <button type="submit" class="btn-primary">Set</button>
+        </form>
+      </div>
+      <div class="container-fluid mt-4">
+        <h3>Send message:</h3>
+        <form action="newMessage" method="POST" class="d-sm-inline-flex">
+          <input type="text" name="message" class="input-sm"/>
+          <select class="form-select form-select-sm m-2" id="agent">
+            <option value="" selected>Channel</option>
+          </select>
+          <button type="submit" class="btn-primary btn-lg m-2">Send</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="public/app.js"></script>
+  </body>
+</html>
