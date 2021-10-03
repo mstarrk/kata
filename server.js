@@ -1,3 +1,4 @@
+require("dotenv").config();
 const Validator = require("./controllers/classes/Validator");
 const fastify = require("fastify")({ logger: false });
 const path = require("path");
@@ -11,8 +12,6 @@ const { Socket } = require("net");
 const socket = Socket({});
 
 const HANDLE = "/tmp/some-file.sock";
-
-const msg = "Hello world";
 
 socket.on("error", (err) => console.log(err));
 socket.on("connect", () => {
