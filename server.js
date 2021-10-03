@@ -11,8 +11,6 @@ console.log("Starting client");
 const { Socket } = require("net");
 const socket = Socket({});
 
-const HANDLE = "/tmp/some-file.sock";
-
 socket.on("error", (err) => console.log(err));
 socket.on("connect", () => {
   console.log("Connect");
@@ -45,7 +43,11 @@ fastify.post("/kata", function (request, reply) {
     return;
   }
 
-  socket.connect(HANDLE);
+  try {
+    socket.connect(PORT);
+  } catch (err) {
+    console.log(err);
+  }
   reply.sendFile("kata.html");
 });
 

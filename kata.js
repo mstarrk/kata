@@ -33,16 +33,8 @@ async function main() {
   // TCP
   console.log("Starting TCP server");
 
-  const { unlinkSync } = require("fs");
   const { Server } = require("net");
   const server = Server({});
-
-  const HANDLE = "/tmp/some-file.sock";
-  try {
-    unlinkSync(HANDLE);
-  } catch (err) {
-    if (err.code !== "ENOENT") console.log(err);
-  }
 
   server.on("error", (err) => console.log(err));
   server.on("listening", () => console.log("Listening . . ."));
@@ -74,7 +66,12 @@ async function main() {
     client.on("end", () => console.log("Connection Ended"));
   });
 
-  server.listen(process.env.PORT);
+  try {
+    server.listen(process.env.PORT);
+  } catch (err) {
+    console.log(`Error server listen - PORT ${process.env.PORT}`);
+    console.log(err);
+  }
 }
 // -------------------------------------------------
 // Event listeners
