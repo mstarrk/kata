@@ -2,7 +2,6 @@
 require("dotenv").config();
 const Discord = require("discord.js");
 const db = require("./controllers/Database");
-const ipc = require("node-ipc");
 // -------------------------------------------------
 
 // Controllers
