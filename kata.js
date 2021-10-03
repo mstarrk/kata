@@ -95,5 +95,3 @@ dClient.ws.on("INTERACTION_CREATE", (interaction) => {
 // -------------------------------------------------
 main();
 // -------------------------------------------------
-
-module.exports = Data;
