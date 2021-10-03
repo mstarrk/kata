@@ -1,7 +1,7 @@
 const Validator = require("./controllers/classes/Validator");
 const fastify = require("fastify")({ logger: false });
 const path = require("path");
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT;
 
 // IPC client
 
@@ -23,9 +23,6 @@ socket.on("data", (data) => {
   socket.write(data);
   socket.end();
 });
-
-//
-process.env.KEY = 123;
 
 // Plugins
 
